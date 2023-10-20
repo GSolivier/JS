@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async e Await JS</h1>
+
+    <h2>Buscar todos os posts</h2>
+    <button onclick="buscarPosts()">Chamar Api</button>
+
+    <h2>Buscar um post pelo id</h2>
+    <label for="id">ID Post</label>
+    <input type="number" id="id" placeholder="Digite o ID do post">
+    <button onclick="buscarUmPost(document.getElementById('id').value)">Exibir Post</button>
+    
+
+    <script>
+        const url = "https://jsonplaceholder.typicode.com"
+
+        //get
+        async function buscarPosts(){
+            
+            const resource = `${url}/posts`
+
+            try {
+
+                const api = await fetch(resource)
+                const dados = await api.json()
+                console.log(dados)
+
+            } catch (error) {
+
+                console.log(error)
+
+            }
+
+
+        }
+
+        async function buscarUmPost(id){
+
+            const resource = `${url}/posts/${id}`
+
+            try {
+
+                const api = await fetch(resource)
+                const dados = await api.json()
+                console.log(dados)
+
+            } catch (error) {
+
+                console.log(error)
+
+            }
+        }
+    </script>
+</body>
+</html>

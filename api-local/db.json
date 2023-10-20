@@ -1,0 +1,39 @@
+{
+  "contatos" : [
+
+  ],
+
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+
+      "title": "teste",
+      "author": "teste",
+      "id": 3
+    },
+    {
+      "title": "aula sobre javaScript",
+      "author": "Guilherme",
+      "id": 4
+    },
+    {
+      "title": "MUito bom em em em",
+      "author": "Guiiiiiiiiiiiiiiiiiiiii",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
